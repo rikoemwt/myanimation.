@@ -1,0 +1,257 @@
+video {
+  position: fixed;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.fish1 {
+  transform: scale(-1, -1);
+  position: absolute;
+  top: 350px;
+  left: 80px;
+  width: 200px;
+  animation-name: move-around1;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes move-around1 {
+  25% {
+    transform: rotate(-45deg) translateY(100px);
+
+
+  }
+
+  50% {
+    transform: rotate(-90deg) translateY(50px);
+
+  }
+
+  75% {
+    transform: rotate(-180deg) translateY(10px);
+
+  }
+}
+
+
+.fish2 {
+  position: absolute;
+  top: 400px;
+  right: 180px;
+  width: 200px;
+  animation-name: move-around2;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes move-around2 {
+  25% {
+    transform: rotate(45deg) translateY(-200px);
+
+  }
+
+  50% {
+    transform: rotate(180deg) translateY(-100px);
+
+  }
+
+  75% {
+    transform: rotate(45deg) translateY(100px);
+
+  }
+}
+
+.fish3 {
+
+  position: absolute;
+  top: 250px;
+  right: 50px;
+  width: 200px;
+  animation-name: move-around3;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes move-around3 {
+  25% {
+    transform: rotate(-90deg) translateY(-200px);
+
+  }
+
+  50% {
+    transform: rotate(-45deg) translateY(-100px);
+
+  }
+
+  75% {
+    transform: rotate(-180deg) translateY(100px);
+
+  }
+}
+
+.fish4 {
+  transform: scale(-1, 1);
+  position: absolute;
+  top: 200px;
+  left: 200px;
+  width: 200px;
+  animation-name: move-around4;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes move-around4 {
+  25% {
+    transform: rotate(-45deg) translateY(-200px);
+
+  }
+
+  50% {
+    transform: rotate(-180deg) translateY(-100px);
+
+  }
+
+  75% {
+    transform: rotate(-180deg) translateY(-300px);
+
+  }
+
+
+}
+
+
+@media (min-width:600px) {
+  .fish1 {
+    position: absolute;
+    top: 350px;
+    left: 350px;
+  }
+
+  .fish2 {
+    position: absolute;
+    top: 450px;
+    right: 500px;
+  }
+
+  .fish3 {
+    position: absolute;
+    top: 250px;
+    right: 300px;
+  }
+
+  .fish4 {
+    position: absolute;
+    top: 200px;
+    left: 450px;
+  }
+}
+
+
+.btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+
+
+.btn::before,
+.btn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100px;
+  left: 250px;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #92d2fbd6;
+  border-radius: 50%;
+  box-sizing: border-box;
+  pointer-events: none;
+  animation: water 2s linear infinite;
+}
+
+.btn::after {
+  animation-delay: 1s;
+}
+
+
+.btn2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+
+
+.btn2::before,
+.btn2::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 300px;
+  left: 550px;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #9ad6fcd6;
+  border-radius: 50%;
+  box-sizing: border-box;
+  pointer-events: none;
+  animation: water 2s linear infinite;
+}
+
+.btn2::after {
+  animation-delay: 1s;
+}
+
+.btn3 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+
+
+.btn3::before,
+.btn3::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 400px;
+  left: 300px;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #9dd0f0d6;
+  border-radius: 50%;
+  box-sizing: border-box;
+  pointer-events: none;
+  animation: water 2s linear infinite;
+}
+
+.btn3::after {
+  animation-delay: 1s;
+}
+
+@keyframes water {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
